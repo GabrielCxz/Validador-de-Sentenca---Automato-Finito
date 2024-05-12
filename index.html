@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Sentença - Autômato Finito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Validador de Sentença - Autômato Finito</h1>
+        <form id="inputForm" autocomplete="off">
+            <label for="states">Estados (separados por vírgula):</label>
+            <input type="text" id="states" placeholder="q0,q1,q2,q3" autocomplete="off">
+            <br>
+            <label for="letras">Alfabeto (separado por vírgula):</label>
+            <input type="text" id="letras" placeholder="0,1" autocomplete="off">
+            <br>
+            <label for="transitions">Transições (formato: estado,símbolo->próximo_estado;):</label>
+            <input type="text" id="transitions"
+                placeholder="q0,0->q1; q1,0->q0"
+                autocomplete="off">
+            <br>
+            <label for="initialState">Estado Inicial:</label>
+            <input type="text" id="initialState" placeholder="q0" autocomplete="off">
+            <br>
+            <label for="acceptingStates">Estados Fianis (separados por vírgula):</label>
+            <input type="text" id="acceptingStates" placeholder="q1,q2" autocomplete="off">
+            <br>
+            <label for="inputSequence">Sentença:</label>
+            <input type="text" id="inputSequence" name="inputSequence" autocomplete="off">
+            <button type="submit">Submit</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <h1 id="teste"></h1>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
